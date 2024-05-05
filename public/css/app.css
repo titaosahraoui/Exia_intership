@@ -1,0 +1,129 @@
+/* styles.css */
+
+/* Background color */
+
+/* Text color */
+.text-white {
+    color: white;
+}
+
+/* Flexbox utility classes */
+.flex {
+    display: flex;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.items-center {
+    align-items: center;
+}
+
+/* Padding utility class */
+.p-4 {
+    padding: 1rem;
+}
+
+/* Border utility class */
+.border-b {
+    border-bottom: 1px solid;
+}
+
+/* Spacing utility classes */
+.space-x-4 > * {
+    margin-right: 1rem;
+}
+
+.space-x-2 > * {
+    margin-right: 0.5rem;
+}
+
+/* Visibility utility class */
+.hidden {
+    display: none;
+}
+
+.md\\:flex {
+    display: flex;
+}
+
+/* Hover effect */
+.hover\\:text-gray-300:hover {
+    color: #d2d6e8;
+}
+
+/* Typography utility classes */
+.text-2xl {
+    font-size: 1.875rem;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+/* Positioning utility classes */
+.relative {
+    position: relative;
+}
+
+/* Size utility classes */
+.h-10 {
+    height: 2.5rem;
+}
+
+.w-10 {
+    width: 2.5rem;
+}
+
+.shrink-0 {
+    flex-shrink: 0;
+}
+
+/* Overflow utility class */
+.overflow-hidden {
+    overflow: hidden;
+}
+
+/* Border radius utility class */
+.rounded-full {
+    border-radius: 9999px;
+}
+
+/* Background color utility class */
+.bg-muted {
+    background-color: #d2d6e8;
+}
+
+/* Text color utility classes */
+.text-gray-400 {
+    color: #a5a8c4;
+}
+
+.text-gray-300 {
+    color: #d2d6e8;
+}
+
+/* SVG icon styling */
+.svg {
+    display: inline-block;
+    fill: currentColor;
+    vertical-align: middle;
+}
+
+/* Stroke utility classes */
+.stroke-current {
+    stroke: currentColor;
+}
+
+.stroke-2 {
+    stroke-width: 2;
+}
+
+.stroke-linecap-round {
+    stroke-linecap: round;
+}
+
+.stroke-linejoin-round {
+    stroke-linejoin: round;
+}

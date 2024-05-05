@@ -1,0 +1,477 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #01073e;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #01073e;
+    height: 10vh;
+    border-bottom: 1px solid #272727;
+}
+.navbar img {
+    margin-left: 30px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.link {
+    text-decoration: none;
+    color: white;
+}
+.links {
+    display: flex;
+    gap: 30px;
+}
+.btn-index {
+    width: 100px;
+    height: 30px;
+    border: 3px solid #315cfd;
+    border-radius: 45px;
+    transition: all 0.3s;
+    cursor: pointer;
+    background: white;
+    font-size: 0.8em;
+    font-weight: 550;
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+}
+.btn-index a {
+    text-decoration: none;
+    color: black;
+}
+.btn-index a:hover {
+    color: white;
+}
+.btn-index:hover {
+    background: #315cfd;
+    color: white;
+    font-size: 1em;
+    text-decoration: none;
+}
+.navbar button:hover {
+    background: #315cfd;
+    color: white;
+    font-size: 1em;
+}
+/* this is a recreation of twitter search in css */
+.form {
+    --input-text-color: #fff;
+    --input-bg-color: #1e1e1e;
+    --focus-input-bg-color: #1e1e1e;
+    --text-color: #949faa;
+    --active-color: #1b9bee;
+    --width-of-input: 300px;
+    --inline-padding-of-input: 1.2em;
+    --gap: 0.9rem;
+}
+/* form style */
+.form {
+    font-size: 0.9rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    width: var(--width-of-input);
+    position: relative;
+    isolation: isolate;
+}
+/* a fancy bg for showing background and border when focus. */
+.fancy-bg {
+    position: absolute;
+    width: 100%;
+    inset: 0;
+    background: var(--input-bg-color);
+    border-radius: 30px;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+/* label styling */
+label {
+    width: 100%;
+    padding: 0.8em;
+    height: 40px;
+    padding-inline: var(--inline-padding-of-input);
+    display: flex;
+    align-items: center;
+}
+
+.search,
+.close-btn {
+    position: absolute;
+}
+/* styling search-icon */
+.search {
+    fill: var(--text-color);
+    left: var(--inline-padding-of-input);
+}
+/* svg -- size */
+svg {
+    width: 17px;
+    display: block;
+}
+/* styling of close button */
+.close-btn {
+    border: none;
+    right: var(--inline-padding-of-input);
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    padding: 0.1em;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--active-color);
+    opacity: 0;
+    visibility: hidden;
+}
+/* styling of input */
+.input {
+    color: var(--input-text-color);
+    width: 100%;
+    margin-inline: min(2em, calc(var(--inline-padding-of-input) + var(--gap)));
+    background: none;
+    border: none;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.input::placeholder {
+    color: var(--text-color);
+}
+/* input background change in focus */
+.input:focus ~ .fancy-bg {
+    border: 1px solid var(--active-color);
+    background: var(--focus-input-bg-color);
+}
+/* search icon color change in focus */
+.input:focus ~ .search {
+    fill: var(--active-color);
+}
+/* showing close button when typing */
+.input:valid ~ .close-btn {
+    opacity: 1;
+    visibility: visible;
+}
+/* this is for the default background in input,when selecting autofill options -- you can remove this code if you do not want to override the browser style.  */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
+    -webkit-transition-delay: 9999s;
+}
+.main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;800&family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+    font-family: "Poppins", "sans-sarif";
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --body-color: #e4e9f7;
+    --sidebar-color: #01073e;
+    --primary-color: #f4f2f2;
+    --primary-color-light: #f4f2f2;
+    --toggle-color: #ddd;
+    --text-color: #707070;
+    --dark-color: #000;
+
+    --trans-02: all 0.2s ease;
+    --trans-03: all 0.3s ease;
+    --trans-04: all 0.4s ease;
+    --trans-04: all 0.5s ease;
+}
+
+/* Reusable CSS */
+
+.sidebara .text {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-color);
+    /* transition: var(--trans-04); */
+    white-space: unset;
+    opacity: 1;
+}
+
+.sidebara .image {
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+}
+
+/* Sidebar */
+.sidebara {
+    position: static;
+    /* width: 100%; */
+    height: 100%;
+    width: 250px;
+    background-color: var(--sidebar-color);
+    padding: 10px 14px;
+    transition: var(--trans-02);
+    border-right: 1px solid #262626;
+}
+
+.sidebara header {
+    position: relative;
+}
+
+.header-text .main {
+    font-weight: 600;
+}
+
+.header-text .sub {
+    margin-top: -2px;
+}
+
+.sidebara li {
+    height: 50px;
+    /* background-color: red; */
+    margin-top: 10px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.sidebara .icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 60px;
+    font-size: 20px;
+}
+.sidebara .icons,
+.sidebara .text {
+    color: var(--text-color);
+    transition: var(--trans-03);
+}
+
+.sidebara a {
+    height: 100%;
+    width: 100%;
+    color: #707070;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding-right: 50px;
+    border-radius: 6px;
+    transition: var(--trans-04);
+    text-align: left;
+}
+
+.sidebara a:hover {
+    background: var(--primary-color);
+}
+.sidebara a:hover .icons,
+.sidebara a:hover .text {
+    color: var(--dark-color);
+}
+
+@import "https://fonts.googleapis.com/css?family=Open+Sans:600,700";
+
+* {
+    font-family: "Open Sans", sans-serif;
+}
+
+.rwd-table {
+    margin: auto;
+    min-width: 75vw;
+    max-width: 100%;
+    border-collapse: collapse;
+    margin-left: 100px;
+    margin-top: 20px;
+}
+
+.rwd-table tr:first-child {
+    border-top: none;
+    background: #262626;
+    color: #fff;
+}
+
+.rwd-table tr {
+    border-top: 1px solid #272727;
+    border-bottom: 1px solid #272727;
+    background-color: #1e1e1e;
+}
+
+.rwd-table tr:nth-child(odd):not(:first-child) {
+    background-color: #1e1e1e;
+}
+
+.rwd-table th {
+    display: none;
+}
+
+.rwd-table td {
+    display: block;
+}
+
+.rwd-table td:first-child {
+    margin-top: 0.5em;
+}
+
+.rwd-table td:last-child {
+    margin-bottom: 0.5em;
+}
+
+.rwd-table td:before {
+    content: attr(data-th) ": ";
+    font-weight: bold;
+    width: 120px;
+    display: inline-block;
+    color: #000;
+}
+
+.rwd-table th,
+.rwd-table td {
+    text-align: left;
+}
+
+.rwd-table {
+    color: #fff;
+    border-radius: 0.4em;
+    overflow: hidden;
+}
+
+.rwd-table tr {
+    border-color: #272727;
+}
+
+.rwd-table th,
+.rwd-table td {
+    padding: 0.5em 1em;
+}
+@media screen and (max-width: 601px) {
+    .rwd-table tr:nth-child(2) {
+        border-top: none;
+    }
+}
+@media screen and (min-width: 600px) {
+    .rwd-table tr:hover:not(:first-child) {
+        background-color: #262626;
+    }
+    .rwd-table td:before {
+        display: none;
+    }
+    .rwd-table th,
+    .rwd-table td {
+        display: table-cell;
+        padding: 0.25em 0.5em;
+    }
+    .rwd-table th:first-child,
+    .rwd-table td:first-child {
+        padding-left: 0;
+    }
+    .rwd-table th:last-child,
+    .rwd-table td:last-child {
+        padding-right: 0;
+    }
+    .rwd-table th,
+    .rwd-table td {
+        padding: 1em !important;
+    }
+}
+.student-info {
+    display: flex;
+    align-items: center;
+}
+
+.student-photo {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.container {
+    display: block;
+    text-align: center;
+}
+.main {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-left: 250px;
+    padding-top: 10vh;
+}
+
+.sidebar {
+    /* position: static; */
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    width: auto; /* Adjust width as needed */
+    height: 100%;
+    overflow-y: hidden; /* Enable vertical scrolling */
+    padding-top: 20px; /* Adjust top padding as needed */
+}
+.menu-item {
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    color: #bdc3c7;
+    transition:
+        background-color 0.3s,
+        border-left 0.3s,
+        color 0.3s;
+    position: relative;
+}
+.menu-item img {
+    margin-right: 10px;
+}
+.menu-item:hover {
+    background-color: #f9f9f9;
+    border-left: 3px solid #f1c40f;
+    color: #000;
+    cursor: pointer;
+}
+.menu-section-header {
+    padding: 15px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ecf0f1;
+    background-color: #01073e;
+    margin: 20px 0;
+}
+.notification {
+    background-color: rgb(47, 180, 47);
+    border-radius: 50%;
+    color: black;
+    padding: 3px 7px;
+    font-size: 15px;
+    position: relative;
+    top: -2px;
+    margin-left: auto;
+}
+
+.sidebar-container {
+    background-color: white; /* Set the background to white */
+    width: 250px; /* Adjust width as needed */
+    border-radius: 10px; /* For the rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* For the shadow effect */
+    padding: 20px;
+    font-family: "Arial", sans-serif;
+}
+.CRUDbutton {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+}
